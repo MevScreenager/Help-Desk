@@ -1,0 +1,6 @@
+.tasks {
+      display: grid;
+      grid-template-columns: minmax(40rem, auto) minmax(38rem, auto);
+      gap: 1rem;
+      padding-inline: 1rem;
+}

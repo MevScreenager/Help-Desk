@@ -1,0 +1,131 @@
+.task {
+      --border-radius: .3rem;
+      --background: white;
+      --color-marker: rgb(138,196,112);
+      --color-status: rgb(0,122,204);
+      --padding: 1rem;
+
+      background-color: var(--background);
+      box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, 0.169);
+      border-radius: var(--border-radius);
+      display: grid;
+      grid-template-columns: 6px auto 200px;
+      cursor: pointer;
+}
+
+.task__marker {
+      background-color: var(--color-marker);
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+@mixin emoji-color($color) {
+      color: transparent;  
+      text-shadow: 0 0 0 $color;
+}
+
+.task__about {
+      --color-emoji-save: var(--background);
+      --color-emoji-fire: var(--background);
+
+      padding-block: var(--padding);
+      padding-inline: var(--padding);
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      &-name {
+            display: grid;
+            grid-template-columns: auto 1rem 1rem;
+            gap: 1rem;
+            padding-right: var(--padding);
+
+            h3 {
+                  overflow: hidden;
+                  white-space: nowrap;
+                  width: 338px;
+                  text-overflow: ellipsis;
+            }
+
+            &-save {
+                  @include emoji-color(var(--color-emoji-save));
+            }
+            &-fire {
+                  @include emoji-color(var(--color-emoji-fire))
+            }
+            
+      }
+
+      &-comment {
+            /*написать про совместимость*/
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+      }
+      &--footer {
+            display: flex;
+            justify-content: space-evenly;
+            
+            .task__about-performer {
+                  opacity: 50%;
+            }
+      
+            .task__about-status {
+                  color: var(--color-status);
+            }
+      }
+}
+
+
+@mixin emoji-around {
+      font-size: .8rem;
+      opacity: 30%;
+}
+
+@mixin emoji {
+      filter: grayscale(100%);
+      @include emoji-around;
+}
+
+.task__info {
+      padding: var(--padding);
+      border-radius:  0 var(--border-radius) var(--border-radius) 0;
+      background-color: rgb(245,248,255);
+      letter-spacing: .05rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &-start::before {
+            content: '⚙️';
+            @include emoji;
+      }
+      &-from::before {
+            content: '📩';
+            @include emoji;
+      }
+      &-to::before {
+            content: '📅';
+            @include emoji;
+      }
+      &-author {
+            p {
+                  overflow: hidden;
+                  white-space: nowrap;
+                  width: 138px;
+                  text-overflow: ellipsis;
+            }
+      
+            &::before {
+                  content: '👤';
+                  @include emoji;
+            }
+      }
+
+      div {
+            display: flex;
+            justify-content: space-between; 
+      }
+}

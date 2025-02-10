@@ -1,0 +1,141 @@
+@charset "UTF-8";
+.task {
+  --border-radius: .3rem;
+  --background: white;
+  --color-marker: rgb(138,196,112);
+  --color-status: rgb(0,122,204);
+  --padding: 1rem;
+  background-color: var(--background);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.169);
+          box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.169);
+  border-radius: var(--border-radius);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6px auto 200px;
+  grid-template-columns: 6px auto 200px;
+  grid-template-rows: 1;
+  cursor: pointer;
+}
+
+.task__marker {
+  background-color: var(--color-marker);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.task__about {
+  --color-emoji-save: var(--background);
+  --color-emoji-fire: var(--background);
+  padding-block: var(--padding);
+  padding-inline: var(--padding);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+.task__aboutName {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1rem 1rem 1rem 1rem;
+  grid-template-columns: auto 1rem 1rem;
+  gap: 1rem;
+  padding-right: var(--padding);
+}
+.task__aboutName h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 338px;
+  text-overflow: ellipsis;
+}
+.task__aboutNameSave {
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-emoji-save);
+}
+.task__aboutNameFire {
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-emoji-fire);
+}
+.task__aboutComment {
+  /*написать про совместимость*/
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+.task__aboutFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.task__aboutFooter .task__aboutPerformer {
+  opacity: 50%;
+}
+.task__aboutFooter .task__aboutStatus {
+  color: var(--color-status);
+}
+
+.task__info {
+  padding: var(--padding);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  background-color: rgb(245, 248, 255);
+  letter-spacing: 0.05rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.task__infoStart::before {
+  content: "⚙️";
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  font-size: 0.8rem;
+  opacity: 30%;
+}
+.task__infoFrom::before {
+  content: "📩";
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  font-size: 0.8rem;
+  opacity: 30%;
+}
+.task__infoTo::before {
+  content: "📅";
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  font-size: 0.8rem;
+  opacity: 30%;
+}
+.task__infoAuthor p {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 138px;
+  text-overflow: ellipsis;
+}
+.task__infoAuthor::before {
+  content: "👤";
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  font-size: 0.8rem;
+  opacity: 30%;
+}
+.task__info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}

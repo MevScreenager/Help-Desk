@@ -1,0 +1,5 @@
+.task__about-name {
+    display: flex;
+    gap: 1rem;
+    padding-right: var(--padding);
+}

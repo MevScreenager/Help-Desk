@@ -1,4 +1,5 @@
 import React from "react";
+import cls from '../css/modules/Task.module.css'
 
 const Task = (props) => {
       const colors = [0, 0]
@@ -33,34 +34,34 @@ const Task = (props) => {
                   fire.style.setProperty('--color-emoji-fire', 'var(--background)')
       }
       return (
-            <article className="task" onMouseOver={(e) => onMouseOver(e)} onMouseOut={(e) => onMouseOut(e)}>
-                  <div className="task__marker"></div>
-                  <div className="task__about">
-                        <div className="task__about-name">
+            <article className={cls.task} onMouseOver={(e) => onMouseOver(e)} onMouseOut={(e) => onMouseOut(e)}>
+                  <div className={cls.task__marker}></div>
+                  <div className={cls.task__about}>
+                        <div className={cls.task__aboutName}>
                               <h3>{props.name}</h3>
-                              <span className="task__about-name-save" id='save' onClick={(e) => onClickSave(e)}>⭐</span>
-                              <span className="task__about-name-fire" id='fire' onClick={(e) => onClickFire(e)}>🔥</span>
+                              <span className={cls.task__aboutNameSave} id='save' onClick={(e) => onClickSave(e)}>⭐</span>
+                              <span className={cls.task__aboutNameFire} id='fire' onClick={(e) => onClickFire(e)}>🔥</span>
                         </div>
                         
-                        <p className="task__about-comment">{props.comment}</p>
-                        <p className="task__about--footer">
-                              <span className="task__about-performer">{props.performer}</span>
-                              <span className="task__about-status">{props.status}</span>
+                        <p className={cls.task__aboutComment}>{props.comment}</p>
+                        <p className={cls.task__aboutFooter}>
+                              <span className={cls.task__aboutPerformer}>{props.performer}</span>
+                              <span className={cls.task__aboutStatus}>{props.status}</span>
                         </p>
                   </div>
-                  <aside className="task__info">
-                        <div className="task__info-from">
+                  <aside className={cls.task__info}>
+                        <div className={cls.task__infoFrom}>
                               <time datatime={props.dataF}>{props.dataF}</time>
                               <time datatime={props.timeF}>{props.timeF}</time>
                         </div>
-                        <div className="task__info-to">
+                        <div className={cls.task__infoTo}>
                               <time datatime={props.dataT}>{props.dataT}</time>
                               <time datatime={props.timeT}>{props.timeT}</time>
                         </div>
-                        <div className="task__info-author">
+                        <div className={cls.task__infoAuthor}>
                               <p>{props.author}</p>
                         </div>
-                        <div className="task__info-start">
+                        <div className={cls.task__infoStart}>
                               <time datatime={props.dataS}>{props.dataS}</time>
                               <time datatime={props.timeS}>{props.timeS}</time>
                         </div>

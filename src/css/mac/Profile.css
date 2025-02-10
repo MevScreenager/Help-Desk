@@ -1,0 +1,6 @@
+.profile {
+    display: grid;
+    grid-template-columns: 33rem auto;
+    grid-template-rows: 1;
+    padding: 1rem;
+}

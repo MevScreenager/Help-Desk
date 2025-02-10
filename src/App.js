@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/page/Dashboard";
 import BasePage from "./components/page/BasePage";
-import { linksNavbar } from "./units";
+import { linksNavbar } from "./units/linksNavbar";
 
 function App() {
   const [page, setPage] = useState(<Dashboard/>)

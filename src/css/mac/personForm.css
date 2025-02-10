@@ -1,0 +1,127 @@
+.personForm {
+    position: relative;
+    display: grid;
+    grid-template-columns: 16.5rem 16.5rem ;
+    grid-template-areas: 
+        'profile    profile     '
+        '1          firstName   '
+        '2          secondName  '
+        '3          patronymic  '
+        '4          dataOfBirth '
+        '5          gender      '
+        '6          status      '
+        'placeWork  placeWork   '
+        '7          company     '
+        '8          post        '
+        'contacts   contacts    '
+        '9          city        '
+        '10         email       '
+        '11         phone       '
+        'save       save        '
+    ;
+    gap: .5rem;
+
+}
+form h4 {
+    display: flex;
+    justify-content: center;
+
+}
+#save {
+    grid-area: save;
+    width: 9rem;
+    justify-self: center;
+}
+
+input,
+select,
+textarea,
+#save {
+    border-radius: 1rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+}
+
+textarea {
+    min-height: 6rem;
+    resize: none;
+}
+
+#profile {
+    grid-area: profile;
+}
+#1 {
+    grid-area: 1;
+}
+#2 {
+    grid-area: 2;
+}
+#3 {
+    grid-area: 3;
+}
+#4 {
+    grid-area: 4;
+}
+#5 {
+    grid-area: 5;
+}
+#6 {
+    grid-area: 6;
+}
+#firstName {
+    grid-area: firstName;
+}
+#secondName {
+    grid-area: secondName;
+}
+#patronymic {
+    grid-area: patronymic;
+}
+#dataOfBirth {
+    grid-area: dataOfBirth;
+}
+#gender {
+    grid-area: gender;
+}
+#status {
+    grid-area: status;
+}
+
+
+#placeWork {
+    grid-area: placeWork;
+}
+#7 {
+    grid-area: 7;
+}
+#8 {
+    grid-area: 8;
+}
+#company {
+    grid-area: company;
+}
+#post {
+    grid-area: post;
+}
+
+#contacts {
+    grid-area: contacts;
+}
+#9 {
+    grid-area: 9;
+}
+#10 {
+    grid-area: 10;
+}
+#11 {
+    grid-area: 11;
+}
+#city {
+    grid-area: city;
+}
+#email {
+    grid-area: email;
+}
+#phone {
+    grid-area: phone;
+}

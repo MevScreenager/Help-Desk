@@ -1,9 +1,10 @@
 import React from "react";
+import PersonForm from "../PersonForm";
 
 const Profile = () => {
     return (
-        <div>
-
+        <div className="profile">
+            <PersonForm/>
         </div>
     )
 }

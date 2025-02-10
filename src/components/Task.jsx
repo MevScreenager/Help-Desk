@@ -33,8 +33,14 @@ const Task = (props) => {
             if (!colors[1])
                   fire.style.setProperty('--color-emoji-fire', 'var(--background)')
       }
+      const openTaskModal = (props) => {
+            console.log('Task: openTaskModal')
+      }
       return (
-            <article className={cls.task} onMouseOver={(e) => onMouseOver(e)} onMouseOut={(e) => onMouseOut(e)}>
+            <article className={cls.task} 
+                        onMouseOver={(e) => onMouseOver(e)} 
+                        onMouseOut={(e) => onMouseOut(e)}
+                        onClick={() => openTaskModal(props)}>
                   <div className={cls.task__marker}></div>
                   <div className={cls.task__about}>
                         <div className={cls.task__aboutName}>

@@ -1,0 +1,4 @@
+{
+      "serverPort": 5000,
+      "dbURL": "mongodb+srv://Maverick:qwertyuiop@desk.4viso.mongodb.net/?retryWrites=true&w=majority&appName=desk"
+}

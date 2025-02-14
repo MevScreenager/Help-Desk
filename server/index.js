@@ -16,7 +16,7 @@ const start = async () => {
                   console.log('server port: ', PORT)
             })
       } catch (e) {
-            
+
       }
 }
 

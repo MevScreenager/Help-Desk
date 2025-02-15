@@ -1,13 +1,14 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const config = require("config")
-const authRouter = require("./routes/auth.routes")
+const authRouter = require("./routes/auth.routers")
+const taskRouter = require("./routes/task.routers")
 
 const app = express()
 const PORT = config.get('serverPort')
 
 app.use(express.json())
-app.use('/api/auth', authRouter)
+app.use('/api', authRouter, taskRouter)
 
 const start = async () => {
       try {

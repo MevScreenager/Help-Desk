@@ -6,7 +6,7 @@ const User = new Schema({
       firstName: {type: String, required: true},
       secondName: {type: String, required: true},
       patronymic: {type: String, default: null},
-      dataOfBirth: {type: String, required: true},
+      dataOfBirth: {type: Date, required: true},
       gender: {type: String, required: true},
       status: {type: String, default: null},
 

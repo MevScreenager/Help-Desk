@@ -1,14 +1,15 @@
-const Router = require("express")
+const express = require("express")
 const bcrypt = require("bcryptjs")
 const {check, validationResult} = require("express-validator")
 const User = require("../models/User")
-const router = new Router()
 
-router.post('/registration', 
+const router = express.Router()
+
+router.post('/auth/registration',
       [
             check('email', 'Uncorrect email').isEmail(),
             check('password', 'Password must be longer than 3 and shorter than 12').isLength({min: 3, max: 12})
-      ], 
+      ],
       async (req, res) => {
       try {
             const errors = validationResult(req)
@@ -35,17 +36,17 @@ router.post('/registration',
             return res.json({message: "User was created"})
       } catch (e) {
             console.log(e)
-            res.send({message: `Server error (registration) ${e}`})
+            res.send({message: `Server error, auth.router registration: ${e}`})
       }
 })
 
-router.post('/login',
+router.post('/auth/login',
       async (req, res) => {
       try {
             
       } catch (e) {
             console.log(e)
-            res.send({message: `Server error (registration) ${e}`})
+            res.send({message: `Server error, auth.router login: ${e}`})
       }
 })
 

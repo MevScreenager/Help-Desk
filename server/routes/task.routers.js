@@ -5,26 +5,13 @@ const router = express.Router()
 
 router.post('/tasks', async (req, res) => {
       try {
-            const {
-                  name,
-                  comment,
-                  performer,
-                  status,
-                  dateFrom,
-                  dateTo,
-                  dateStart,
-                  author
-            } = req.body
+            const { dateFrom, dateTo, dateStart, ...props} = req.body
 
             const task = new Task({
-                  name,
-                  comment,
-                  performer,
-                  status,
+                  ...props,
                   dateFrom: new Date(dateFrom),
                   dateTo: dateTo ? new Date(dateTo) : null,
-                  dateStart: dateStart ? new Date(dateStart) : null,
-                  author
+                  dateStart: dateStart ? new Date(dateStart) : null
             })
             await task.save()
             return res.json({message: 'Task append'})

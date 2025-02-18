@@ -1,0 +1,35 @@
+.tasks {
+    display: grid;
+    grid-template-columns: minmax(41rem, auto) minmax(10rem, auto);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tasks__task {
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    max-height: calc(100vh - 2rem);
+    border-radius: .3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tasks__task::-webkit-scrollbar {
+    display: none; /* Скрываем полосу прокрутки в WebKit-браузерах */
+}
+
+.tasks__menu {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.tasks__menu-add-task {
+    align-self: center;
+    width: 9rem;
+    border-radius: .5rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+}

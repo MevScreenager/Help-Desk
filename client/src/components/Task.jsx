@@ -2,7 +2,7 @@ import React from "react";
 import cls from '../css/modules/Task.module.css'
 
 const Task = (props) => {
-      const colors = [0, 0]
+      /*const colors = [0, 0]
       const onClickSave = (event) => {
             colors[0] = (colors[0] + 1) % 2
             event.target.style.setProperty(
@@ -32,21 +32,19 @@ const Task = (props) => {
                   save.style.setProperty('--color-emoji-save', 'var(--background)')
             if (!colors[1])
                   fire.style.setProperty('--color-emoji-fire', 'var(--background)')
-      }
+      }*/
       const openTaskModal = (props) => {
             console.log('Task: openTaskModal')
       }
       return (
             <article className={cls.task} 
-                        onMouseOver={(e) => onMouseOver(e)} 
-                        onMouseOut={(e) => onMouseOut(e)}
+                        //onMouseOver={(e) => onMouseOver(e)} 
+                        //onMouseOut={(e) => onMouseOut(e)}
                         onClick={() => openTaskModal(props)}>
                   <div className={cls.task__marker}></div>
                   <div className={cls.task__about}>
                         <div className={cls.task__aboutName}>
                               <h3>{props.name}</h3>
-                              <span className={cls.task__aboutNameSave} id='save' onClick={(e) => onClickSave(e)}>⭐</span>
-                              <span className={cls.task__aboutNameFire} id='fire' onClick={(e) => onClickFire(e)}>🔥</span>
                         </div>
                         
                         <p className={cls.task__aboutComment}>{props.comment}</p>
@@ -77,3 +75,9 @@ const Task = (props) => {
 }
 
 export default Task
+
+/**
+<span className={cls.task__aboutNameSave} id='save' onClick={(e) => onClickSave(e)}>⭐</span>
+                              <span className={cls.task__aboutNameFire} id='fire' onClick={(e) => onClickFire(e)}>🔥</span>
+                        
+ */

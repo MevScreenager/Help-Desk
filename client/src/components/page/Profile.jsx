@@ -1,10 +1,10 @@
 import React from "react";
-import PersonForm from "../PersonForm";
+//import PersonForm from "../PersonForm";
 
 const Profile = () => {
     return (
-        <div className="profile">
-            <PersonForm/>
+        <div className="messenger">
+            <p>Раздел находится в разрабтке</p>
         </div>
     )
 }

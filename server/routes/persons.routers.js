@@ -5,10 +5,10 @@ const router = express.Router()
 
 router.get('/person', async (req, res) => {
       try {
-            const {userName} = req.body
-            const candidate = await Person.findOne({userName})
+            const {email} = req.body
+            const candidate = await Person.findOne({email})
             if (candidate)
-                  return res.status(400).json({message: `User ${userName} don't found` })
+                  return res.status(400).json({message: `User ${email} don't found` })
             return res.json(candidate)
       } catch (e) {
             console.log(e)

@@ -16,20 +16,16 @@ router.post('/auth/registration',
             if (!errors.isEmpty())
                   return res.status(400).json({message: 'Uncorect request', errors})
 
-            const {firstName, secondName, dataOfBirth, gender, city, email, phone, password} = req.body;
+            const {dataOfBirth, email, password, ...props} = req.body;
             const candidate = await User.findOne({email})
             if (candidate)
                   return res.status(400).json({message: `User with email ${email} already exist`})
 
             const hashPassword = await bcrypt.hash(password, 15)
             const user = new User({
-                  firstName,
-                  secondName,
+                  ...props,
                   dataOfBirth: new Date(dataOfBirth),
-                  gender,
-                  city,
                   email,
-                  phone,
                   password: hashPassword
             });
             await user.save()

@@ -17,6 +17,8 @@
         '9          city        '
         '10         email       '
         '11         phone       '
+        'entrance   entrance    '
+        '12         password    '
         'save       save        '
     ;
     gap: .5rem;
@@ -37,7 +39,7 @@ input,
 select,
 textarea,
 #save {
-    border-radius: 1rem;
+    border-radius: .5rem;
     height: 2.2rem;
     font-size: 1.2rem;
 }
@@ -124,4 +126,16 @@ textarea {
 }
 #phone {
     grid-area: phone;
+}
+
+#entrance {
+    grid-area: entrance;
+}
+
+#12 {
+    grid-area: 12;
+}
+
+#password {
+    grid-area: password;
 }

@@ -5,4 +5,5 @@ export const linksNavbar = [
       {name: 'Persons'},
       {name: 'Analytics'},
       {name: 'Profile'},
+      {name: 'Registration'},
 ]

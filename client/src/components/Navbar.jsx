@@ -3,6 +3,7 @@ import Dashboard from "./page/Dashboard";
 import Tasks from "./page/Tasks";
 import Profile from "./page/Profile";
 import Messenger from "./page/Messenger";
+import Registration from "./page/registration/Registration";
 
 const Navbar = (props) => {
       const setPage = (event) => {
@@ -16,6 +17,8 @@ const Navbar = (props) => {
                   case 'Analytics': props.setPage(<Tasks/>)
                         break
                   case 'Profile': props.setPage(<Profile/>)
+                        break
+                  case 'Registration': props.setPage(<Registration/>)
                         break
                   
                   default:
